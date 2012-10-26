@@ -1,0 +1,22 @@
+rails new [name] # 3.2 - creates server
+
+rake db:create	 #3.4 - creates database
+
+rails server	 #4.1 - starts server
+
+rails generate controller home index	#4.2 - customized webpage & views - what index method does in home
+					# 1) New home page is in app/views/home/index.html.erb
+					# 2) Must remove /public/index.html
+					# 3) Then config/routes.rb - root :to => "home#index"
+					# 6.2 - adding a link for erb to parse
+
+rails generate scaffold [model_name] [params as - name:type, comma separated] #6
+		
+rake db:migrate				#6.1 - runs migration
+
+#6.5 - validation of required fields, rest of 6 various useful things
+
+#7.1 - generating another model
+
+#http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model - adding fields to model
+
