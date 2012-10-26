@@ -50,3 +50,9 @@ rake db:migrate				#6.1 - runs migration
 
 #http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model - adding fields to model
 
+
+### ADDING TO A MODEL
+
+rails generate migration Add[Field]To[Model] [field]:[class]
+	# cf rails generate migration AddPositionToEmployee position:string
+	# will still have to manually edit view
