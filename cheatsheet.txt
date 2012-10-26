@@ -5,12 +5,42 @@ rake db:create	 #3.4 - creates database
 rails server	 #4.1 - starts server
 
 rails generate controller home index	#4.2 - customized webpage & views - what index method does in home
+	# create	app/controllers/home_controller.rb
+	# create	app/views/home
+	# create	app/views/home/index.html.erb
+	# create	test/functional/home_controller_test.rb
+	# create	app/helpers/home_helper.rb
+	# create	test/unit/helpers/home_helper_test.rb
+	# create	app/assets/javascripts/home.js.coffee
+	# create	app/assets/stylesheets/home.css.scss
+	
 					# 1) New home page is in app/views/home/index.html.erb
 					# 2) Must remove /public/index.html
 					# 3) Then config/routes.rb - root :to => "home#index"
 					# 6.2 - adding a link for erb to parse
 
-rails generate scaffold [model_name] [params as - name:type, comma separated] #6
+rails generate scaffold [Model_name] [params as - name:type, comma separated] #6
+
+	## CREATES:
+	# db/migrate/20100207214725_create_posts.rb
+	# app/models/post.rb
+	# test/unit/post_test.rb
+	# test/fixtures/posts.yml
+	# config/routes.rb
+	# app/controllers/posts_controller.rb
+	# app/views/posts/index.html.erb
+	# app/views/posts/edit.html.erb
+	# app/views/posts/show.html.erb
+	# app/views/posts/new.html.erb
+	# app/views/posts/_form.html.erb
+	# test/functional/posts_controller_test.rb
+	# app/helpers/posts_helper.rb
+	# test/unit/helpers/posts_helper_test.rb
+	# app/assets/javascripts/posts.js.coffee
+	# app/assets/stylesheets/posts.css.scss
+	# app/assets/stylesheets/scaffolds.css.scss
+
+
 		
 rake db:migrate				#6.1 - runs migration
 
