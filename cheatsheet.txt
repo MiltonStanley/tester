@@ -19,7 +19,7 @@ rails generate controller home index	#4.2 - customized webpage & views - what in
 					# 3) Then config/routes.rb - root :to => "home#index"
 					# 6.2 - adding a link for erb to parse
 
-rails generate scaffold [Model_name] [params as - name:type, comma separated] #6
+rails generate scaffold [Model_name] [params as - name:type] #6
 
 	## CREATES:
 	# db/migrate/20100207214725_create_posts.rb
@@ -46,12 +46,11 @@ rake db:migrate				#6.1 - runs migration
 
 #6.5 - validation of required fields, rest of 6 various useful things
 
-#7.1 - generating another model
+##### Generating ANOTHER Model (7.1)
 
-#http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model - adding fields to model
+$ rails generate model Name [params- property:type]
 
-
-### ADDING TO A MODEL
+##### ADDING TO A MODEL (http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model)
 
 rails generate migration Add[Field]To[Model] [field]:[class]
 	# cf rails generate migration AddPositionToEmployee position:string
@@ -60,3 +59,4 @@ rails generate migration Add[Field]To[Model] [field]:[class]
 			# show.html.erb
 			# _form.html.erb
 	# And finally the actual model, in app/models/[name].rb
+
