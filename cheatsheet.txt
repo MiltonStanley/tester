@@ -55,4 +55,8 @@ rake db:migrate				#6.1 - runs migration
 
 rails generate migration Add[Field]To[Model] [field]:[class]
 	# cf rails generate migration AddPositionToEmployee position:string
-	# will still have to manually edit view
+	# Will still have to manually edit views, found in app/views/[name]s
+			# index.html.erb
+			# show.html.erb
+			# _form.html.erb
+	# And finally the actual model, in app/models/[name].rb
