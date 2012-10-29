@@ -45,12 +45,15 @@ rails generate scaffold [Model_name] [params as - name:type] #6
 rake db:migrate				#6.1 - runs migration
 
 #6.5 - validation of required fields, rest of 6 various useful things
-
+	# Details at http://guides.rubyonrails.org/active_record_validations_callbacks.html
+	#In model, add:
+	validates [property], [HELPERS, ie. ':presence => true']
 
 
 ##### Generating ANOTHER Model (7.1)
 
 rails generate model Name [params- property:type]
+# This only makes the model, not the views etc., - good for tying one model into another (comments to post example)
 	## CREATES 
 	# db/migrate/[timestamp]_create_[names].rb
 	# app/models/[name].rb
@@ -62,11 +65,10 @@ rails generate model Name [params- property:type]
 rake db:migrate
 
 ##### Tying one model to another:
-# same as making another one; but add [superior]:references
+# same as making another one; but add [superior]:references in model.rb
 
 
 ##### ADDING TO A MODEL (http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model)
-# This only makes the model, not the views etc., - good for tying one model into another (comments to post)
 
 rails generate migration Add[Field]To[Model] [field]:[class]
 	# cf rails generate migration AddPositionToEmployee position:string
