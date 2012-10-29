@@ -46,11 +46,27 @@ rake db:migrate				#6.1 - runs migration
 
 #6.5 - validation of required fields, rest of 6 various useful things
 
+
+
 ##### Generating ANOTHER Model (7.1)
 
-$ rails generate model Name [params- property:type]
+rails generate model Name [params- property:type]
+	## CREATES 
+	# db/migrate/[timestamp]_create_[names].rb
+	# app/models/[name].rb
+	# various test_units
+	# Will have to manually do views
+	#
+	# Then run the following to set up database:
+
+rake db:migrate
+
+##### Tying one model to another:
+# same as making another one; but add [superior]:references
+
 
 ##### ADDING TO A MODEL (http://stackoverflow.com/questions/10352832/adding-a-new-field-to-rails-model)
+# This only makes the model, not the views etc., - good for tying one model into another (comments to post)
 
 rails generate migration Add[Field]To[Model] [field]:[class]
 	# cf rails generate migration AddPositionToEmployee position:string
