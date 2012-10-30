@@ -1,4 +1,6 @@
 Tester::Application.routes.draw do
+  resources :needs
+
   resources :employees
 
   get "home/index"
